@@ -34,7 +34,7 @@ sim = () => {
   let valorQr = document.getElementById('valorQr');
   document.getElementById('qr').style = 'display:none;'
   valorQr.innerHTML = '00,00';
- 
+
 
 }
 não = () => {
@@ -69,37 +69,37 @@ entrarVendas = () => {
 }
 backVendas = () => {
   document.querySelector(".conteinerTree").style = 'display: none;'
-  document.querySelector(".conteiner").style = 'display: inline;' 
+  document.querySelector(".conteiner").style = 'display: inline;'
 }
-openTheList = () =>{
+openTheList = () => {
   document.querySelector(".listProduct").style = 'display:flex;'
-   document.querySelector(".menu").style = 'display:none;'
+  document.querySelector(".menu").style = 'display:none;'
 }
-closeTheList = () =>{
+closeTheList = () => {
   document.querySelector(".listProduct").style = 'display:none;'
   document.querySelector('.suporte').style = 'display: none;'
 }
-pixBtn = () =>{
+pixBtn = () => {
   document.querySelector('.pixCode').style = 'display: flex'
-   document.querySelector('.di').style = 'border: none;'
-   document.querySelector('.pix').style = 'border: 2px solid yellow;'
+  document.querySelector('.di').style = 'border: none;'
+  document.querySelector('.pix').style = 'border: 2px solid yellow;'
   document.querySelector('.pagamentoDinheiro').style = 'display: none'
 }
-dinheiroBtn = () =>{
-   document.querySelector('.pixCode').style = 'display: none'
-    document.querySelector('.pix').style = 'border: none;'
-    document.querySelector('.di').style = 'border: 2px solid yellow;'
+dinheiroBtn = () => {
+  document.querySelector('.pixCode').style = 'display: none'
+  document.querySelector('.pix').style = 'border: none;'
+  document.querySelector('.di').style = 'border: 2px solid yellow;'
   document.querySelector('.pagamentoDinheiro').style = 'display: flex'
 }
-suporte = () =>{
-   document.querySelector('.suporte').style = 'display: flex;'
+suporte = () => {
+  document.querySelector('.suporte').style = 'display: flex;'
 }
-openChat = () =>{
+openChat = () => {
   document.querySelector('#chatConteiner').style = 'display: flex;'
   document.querySelector('.suporte').style = 'display: none;'
 }
-encerrar = () =>{
- document.querySelector('#chatConteiner').style = 'display: none;'
+encerrar = () => {
+  document.querySelector('#chatConteiner').style = 'display: none;'
 }
 /////// adicionando valores //////
 tradicionaisSoma = () => {
@@ -256,85 +256,60 @@ Buscar = () => {
     return prev + curr;
 
   })
-  var somaT = soma.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+  var somaT = soma.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
   un.innerHTML = `${uni} Unidades`;
   unTwo.innerHTML = `${uni} Unidades`;
   valor.innerHTML = `${somaT}`;
   valorTwo.innerHTML = `${somaT}`;
-let valorQr = document.getElementById('valorQr');
- valorQr.innerHTML = somaT;
+  let valorQr = document.getElementById('valorQr');
+  valorQr.innerHTML = somaT;
   enviarValor = () => {
-    let receberValue = document.getElementById("receberValue"); 
+    let receberValue = document.getElementById("receberValue");
     let valorEntrada = Number(receberValue.value)
-    var valorEntrada2 = valorEntrada.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    var valorEntrada2 = valorEntrada.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
     const faltante = document.getElementById("faltante")
     const troco = document.getElementById('troco');
     const valorRecebido = document.getElementById("valorRecebido");
 
     let soma2 = valorEntrada - soma;
-    let somaTotal = soma2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
-  let valorQr = document.getElementById('valorQr');
+    let somaTotal = soma2.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+    let valorQr = document.getElementById('valorQr');
 
     if (soma2 < 0) {
       faltante.style = 'color: rgb(133, 3, 3);'
-       troco.style = 'color: ;'
+      troco.style = 'color: ;'
       faltante.innerHTML = `${somaTotal}`;
       valorRecebido.innerHTML = `${valorEntrada2}`;
-      troco.innerHTML = 'R$ 00,00' 
+      troco.innerHTML = 'R$ 00,00'
       valorQr.innerHTML = somaTotal;
     }
     else {
-       faltante.style = 'color:'
+      faltante.style = 'color:'
       valorRecebido.innerHTML = `${valorEntrada2}`;
       troco.innerHTML = `${somaTotal}`;
       troco.style = 'color: green;'
       faltante.innerHTML = 'R$ 00,00'
-        valorQr.innerHTML = '00,00';
+      valorQr.innerHTML = '00,00';
     }
-  
+
     receberValue.value = '';
     console.log(somaTotal)
     zerar = () => {
       troco.innerHTML = "R$ 00,00"
       faltante.innerHTML = "R$ 00,00"
       valorRecebido.innerHTML = "R$ 00,00"
-        faltante.style = 'color:'
-        troco.style = 'color: ;'
+      faltante.style = 'color:'
+      troco.style = 'color: ;'
       receberValue.value = '';
-     valorQr.innerHTML = somaT
+      valorQr.innerHTML = somaT
     }
   }
 }
 
-lg = () => {
-  const user = document.getElementById("user");
-  let password = document.getElementById("password");
-  const senha = Number(password.value);
-    const userId = 'jp@gmail.com';
-    const senhaone = 27835651;
-    abrirlogin = () =>{
-       document.querySelector(".login").style = 'display: none;'
-        document.querySelector(".conteiner").style = 'display: inline;'
-    }
-    if (user == userId) {
-      if (senha == senhaone) {
-       abrirlogin()
-      }
-    }
-    else {
-      document.getElementById("erroPassword").innerHTML = "Usuario ou senha incorretos!"
-    }
-    console.log(userId)
-    console.log(senhaone)
-  
-
-  user.value = '';
-  password.value = '';
-}
-GerarQr = () =>{
+GerarQr = () => {
   var qr = document.querySelector(".qr");
   qr.classList.toggle("mostrar")
   var gerar = document.querySelector('.gerarQR')
-gerar.classList.toggle("qrCor")
+  gerar.classList.toggle("qrCor")
 
 }   

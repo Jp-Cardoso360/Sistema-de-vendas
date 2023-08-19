@@ -6,3 +6,4 @@ Dai comecei a tentar fazer este sistema usando alguns conhecimentos que eu tinha
 
 Para usar ele você precisa saber os codigos dos produtos e eles se encontra no botão  "listas de produtos", agora coloque este codigo no codigo de barras e aperte buscar e o sistema fará um verificação se o produto se encontra cadastrado se sim  ele vai mostrar o preço do produto a imagem e também quantas unidades você passou, se por um a caso o produto não se encontrar cadastrado ele vai aparecer uma mensagem dizendo que o produto não foi encontrado.
  
+![image](https://github.com/Jp-Cardoso360/Sistema-de-vendas/assets/141683330/c05684ab-ee6f-4534-87a4-dbad6e7d08fe)

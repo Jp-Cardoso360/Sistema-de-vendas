@@ -69,7 +69,7 @@ right: 10px;
 top: 57%;
 }
 .conteiner{
-  width: 95%;
+  width:75%;
   height: 100%;
   border: 1px groove rgba(0, 0, 0, 0.342);
   box-shadow: 0px 0px 7px 0 #171760;
@@ -341,7 +341,7 @@ border: 1px solid yellow;
   text-align: center;
  }
  .conteinerTwo{ 
-   width: 95%; 
+   width: 75%; 
   height: 100%;
   border: 1px groove rgba(0, 0, 0, 0.342);
   box-shadow: 0px 0px 7px 0 gray;
@@ -517,7 +517,7 @@ color: white;
   width: 100%;
 }
  .conteinerTree{
-    width: 95%;
+    width: 75%;
   height: 100%;
   border: 1px groove rgba(0, 0, 0, 0.342);
   box-shadow: 0px 0px 7px 0 #171760;

@@ -1,0 +1,801 @@
+body{
+width: 100%;
+height: 600px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+body button:hover{
+box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.863);
+cursor: pointer;
+}
+.login{
+  width: 300px;
+  height: 390px;
+  border: 2px solid #171760 ;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  background-color: white;
+ display: none;
+
+}
+.login h2{
+  color: black;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.login input{
+  width: 70%;
+  padding: 10px;
+  margin: 40px 0 0 0;
+  border: 0;
+  border-bottom: 3px solid #171760;
+  outline: none;
+  background-color: transparent;
+}
+.login span{
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: red;
+}
+.login button{
+  width: 60%;
+  padding: 12px;
+  margin-top: 25px;
+  border-radius: 13px;
+  background-color: #171750;
+  border: 0;
+  font-size: 1rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+}
+.login .fa-arrow-left{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.fa-envelope{
+position: absolute;
+right: 10px;
+top:37%;
+}
+.fa-lock{
+  position: absolute;
+right: 10px;
+top: 57%;
+}
+.conteiner{
+  width: 95%;
+  height: 100%;
+  border: 1px groove rgba(0, 0, 0, 0.342);
+  box-shadow: 0px 0px 7px 0 #171760;
+  border-radius: 10px;
+  position: relative;
+overflow: hidden;
+background-color: white;
+display: inline;
+} 
+
+.topo{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: #2c2c72;
+  border-radius: 10px 10px 0 0;
+}
+.fa-bars{
+  font-size: 1.8rem;
+}
+.menu{
+  position: absolute;
+  top: 0;
+  right: 0; 
+  z-index: 3;
+  width: 45%;
+  height: 700px;
+  background-color: rgba(0, 0, 0, 0.904);
+  color: white;
+  display: none;
+
+}
+.menu ul{
+  height: 70%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+.menu li{
+  list-style: none;
+  width: 95%;
+  margin: 2%;
+  font: 18pt normal;
+  padding: 10px;
+  cursor: pointer;
+}
+.menu li,i{
+letter-spacing: 1px;
+
+}
+.menu i{
+  padding: 5px;
+}
+.menu li:hover{
+  color: black;
+  background-color: yellow;
+}
+.fa-xmark{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.8rem;
+  
+}
+.fa-xmark:hover{
+color: red;
+}
+.conteiner2{
+  width: 49%;
+  height: 250px;
+  border: 2px solid black;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+overflow: hidden;
+
+}
+.conteiner2 p{
+  width: 95%;
+  height: 20px;
+  background-color: #171760a6;
+  color: white;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around; 
+}
+
+.listaDeProdutos{
+  width: 100%;
+  height: 1000px;
+ display: flex;
+ flex-direction: column;
+ overflow-y: scroll;
+}
+.listaDeProdutos li{
+  margin: 1.7px;
+  padding: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #171750;
+  color: white;
+  list-style: decimal;
+}
+#codigo{
+  padding: 5px;
+  border: transparent; 
+  border-bottom: 3px solid #171760;
+  outline: none;
+  text-align: center;
+}
+.valores{
+  position: absolute;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 80px;
+  width: 45%;
+  height: 450px;
+}
+.valores h1{
+  padding: 10px 0 0 0;
+}
+#valor{
+  font-family: fantasy,monospace;
+  font-size: 2.2rem;
+  font-weight: 100;
+  color: #171750;
+}
+#procurar{
+  width: 40%;
+  padding: 7px;
+  border: 2px solid #171760;
+  border-radius: 5px;
+}
+.btns{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.btns button{
+  width: 30%;
+  margin: 5%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.btns i{
+  font-size: 1.4rem;
+}
+#cancelar{
+  background-color: yellow;
+}
+#pagar{
+  background-color: #171760;
+  color: white;
+}
+.codeList button{
+  padding: 8px;
+  background-color: #171760;
+  color: whitesmoke;
+  margin: 20px;
+  border: 0;
+}
+.imgProduto{
+  width: 350px;
+  height: 240px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+#imgP{
+  width: max-content;
+  height: 170px;
+ 
+}
+.cancel{  
+  width: 95%;
+  height: 99%;
+position: absolute;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.479);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+    /* display none */
+  display: none;
+} 
+.btnsCancel{
+  width: 60%;
+  height: 20%;
+  background-color: #171760;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+}
+.btnsCancel h2{
+  font-size: 1.3rem;
+}
+.btnsCancel button{
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+   border-radius: 10px;
+font: 15pt normal bold;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: 0.6s;
+}
+.n{
+  border: 2px dotted rgb(36, 35, 6);
+}
+.btnsCancel button:hover{
+  background-color: #9191c5;
+  color: white;
+}
+.codeErrado{
+  position: absolute;
+  width: 95%;
+  height: 99%;
+   z-index: 3;
+  background-color: rgba(255, 255, 255, 0.425);
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.codeE{
+  width: 60%;
+  height: 30%;
+  background-color: #171760;
+  color: white;
+  border-radius: 10px;
+border: 1px solid yellow;
+}
+.codeE button{
+  width: 20%;
+  padding: 10px;
+   border-radius: 10px;
+   font-size: 1rem;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     transition: 0.6s;
+}
+.codeE button:hover{
+  background-color: #9191c5;
+  color: white;
+}
+.fa-arrow-left{
+  padding: 20px;
+}
+.fa-arrow-left:hover{
+  background-color: rgba(220, 220, 220, 0.329);
+  
+}  
+ 
+ .conteinerTwo h2{
+  text-align: center;
+ }
+ .conteinerTwo{ 
+   width: 95%; 
+  height: 100%;
+  border: 1px groove rgba(0, 0, 0, 0.342);
+  box-shadow: 0px 0px 7px 0 gray;
+  border-radius: 10px;
+  position: relative;
+display: none;
+overflow: hidden;
+ 
+}
+.formasPagamento{
+  width: 100%;
+  height: 7%;
+  padding: 10px;
+  border-bottom: 2px solid #171760;
+  background-color: rgba(220, 220, 220, 0.644);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.formasPagamento button{
+  width: 15%;
+  height: 80%;
+  background-color: #171750;
+  color: white;
+  border-radius: 5px;
+}
+.di{
+  border: 2px solid yellow;
+  transition: 0.1s;
+}
+.pagamentoDinheiro{
+  width: 100%;
+  height: 80%;
+  position: relative;
+
+}
+.pixCode{
+   width: 100%;
+  height: 75%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.pix{
+  transition: 0.2s;
+}
+.pixCode{
+display: none;
+}
+.pixCode button{
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px ;
+  background-color: #171750;
+  color: white;
+  border: 0;
+}
+.pixCode button::before{
+content: 'Gerar QR Code';
+}
+.qrCode{
+  width: 50%;
+  height: 65%;
+  border: 2px solid black;
+  margin-top: 20px;
+}
+.qr{
+  display: none;
+}
+.mostrar{
+  display: inline;
+ 
+}
+.gerarQR{
+  background-color: #9090b4;
+  
+}
+.pixCode .qrCor{
+  background-color: rgb(134, 4, 4);
+
+}
+.pixCode .qrCor::before{
+  content: 'Apagar';
+}
+.receber{
+  width: 50%;
+  height: 100%;
+  background-color: rgba(220, 220, 220, 0.349);
+  position: absolute;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.receber input{
+  padding: 10px;
+  width: 60%;
+ margin-right: 80px;
+ border: 2px solid #171750;
+}
+.receberValor{
+  width: 50%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#enviarValor{
+  position: absolute;
+  width: 25%;
+  height: 70px;
+  right: 7%;
+  top: 18%;
+  background-color: #171750;
+  color: white;
+}
+#zerar{
+  width: 70%;
+  margin-right: 80px;
+  margin-top: 5px;
+  padding: 4px;
+  background-color: rgb(247, 247, 23);
+}
+#valorQr{
+  color: #171750;
+}
+.Reais{
+  margin-top: 50px;
+  animation: animar 3s linear infinite;
+}
+@keyframes animar{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.valoresRecebidos{
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  right: 5%;
+ text-align: center;
+
+}
+.valoresRecebidos button{
+width: 30%;
+}
+.finalizar{
+background-color: #171750;
+color: white;
+}
+.somas{
+  width: 110%;
+  height: 30%;
+ border-top: 4px solid #171750;
+ border-bottom: 4px solid #171750;
+  text-align: left;
+  padding: 0 0 5px 10px;
+}
+.somas span{
+  font-weight: 200;
+  font-size: 1.2rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.valoresRecebidos .btns{
+  width: 100%;
+}
+ .conteinerTree{
+    width: 95%;
+  height: 100%;
+  border: 1px groove rgba(0, 0, 0, 0.342);
+  box-shadow: 0px 0px 7px 0 #171760;
+  border-radius: 10px;
+  position: relative;
+overflow: hidden;
+display: none;
+background-color: white;
+ }
+ .somas span{
+color: #171750;
+ }
+
+ .produtosList{
+   width: 80%;
+   height: 1000px;
+   position: absolute;
+   top: 60px;
+   overflow: scroll;
+   background-color: rgba(220, 220, 220, 0.459);
+   display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+
+ }
+ .pr{
+   width: 30%;
+   height: 200px;
+   margin: 10px;
+   background-color: #9191c5;
+   
+ }
+ .listProduct{
+  width: 95%;
+height: 97%;
+position: absolute;
+  z-index: 3;
+  color: white;
+  background-color: #f0f0f063;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+ }
+ .listProduct ul{
+   width: 50%;
+   height: 95%;
+ background-color: #171750;
+ border-radius: 20px;
+ position: relative;
+
+ }
+ .listProduct li{
+   list-style: decimal;
+   margin: 3px;
+ }
+ .listProduct ol{
+   color: yellow;
+   list-style: decimal;
+ }
+ .listProduct b{
+   color: rgb(50, 212, 64);
+letter-spacing: 1px;
+ }
+ .listProduct b::selection{
+   background-color: rgb(223, 219, 0);
+   color: black;
+ }
+ .closeLIst{
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   font-size: 20px;
+   border-radius: 50%;
+   background-color: yellow;
+ }
+ .closeLIst:hover{
+   background-color: red;
+
+ }
+ .listProduct span{
+   padding-top: 20px;
+margin-left: 10%;
+ }
+ .suporte{
+   position: absolute;
+   width: 95%;
+height: 97%;
+  z-index: 3;
+  color: white;
+  background-color: #f0f0f063;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+ } 
+ .textOfSuporte{
+   width: 70%;
+   height: 55%;
+ background-color: #171750;
+ border-radius: 20px;
+ border: 1px solid yellow;
+ display: flex;
+ flex-direction: column;
+align-items: center;
+text-align: center;
+position: relative;
+ } 
+ .textOfSuporte p{
+   padding: 0;
+   margin: 15px;
+ }
+ .textOfSuporte span{
+   margin: 30px;
+ font-size: 0.9rem;
+   color: yellow;
+ }
+ .textOfSuporte a{
+   color: rgb(0, 195, 255);
+ }
+#chatBtn{
+   padding: 5px;
+   border-radius: 5px;
+   border: 1px solid rgb(255, 255, 266);
+   outline: auto;
+   cursor: pointer;
+ }
+.textOfSuporte button:active{
+  background-color: gainsboro;
+}
+ .suporteBtn{
+   position: absolute;
+   bottom: -60px;
+   background-color: #171750;
+    color: rgb(243, 232, 211);
+    
+ }
+ #version{
+   position: absolute;
+   bottom: -80px;
+   right: 5px;
+   font-size: 0.8rem;
+ }
+ #chatConteiner{
+   width: 95%;
+   height: 100%;
+   position: absolute;
+   background-color: rgba(182, 173, 173, 0.315);
+   display: none;
+   justify-content: center;
+   align-items: center;
+ } 
+ .chatOnline{
+   width: 50%;
+   height: 80%;
+   background-color: white;
+   box-shadow: 0 0 10px inset black;
+   border-radius: 20px;  
+    overflow: hidden;
+     display: flex;
+     flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+ }
+ .topoChat{
+   width: 97%;
+   height: 50px;
+   background-color: #171750;
+   color: yellow;
+   display: flex; 
+    box-shadow: 0 0 20px 10px inset rgb(50, 50, 122);
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
+   position: absolute; top: 5px;
+ }
+ .topoChat h2{
+   margin: 0;
+ }
+ .res-msg{
+   width: 90%; 
+   height: 85%;
+   margin: 50px 0 0 0;
+ border: 1px solid #171750;
+ border-radius: 10px;
+ position: relative;
+ display: flex;
+ flex-direction: column;
+align-items: center;
+ }
+ .enviarMsg{
+   width: 100%;
+   height: 40px;
+   position: absolute;
+   bottom: 5px;
+   display: flex;
+   justify-content: center;
+   background-color: #171750;
+   border-radius: 30px;
+  
+ }
+ .enviarMsg input{
+   width: 75%;
+   border-radius: 10px 28px 0 15px;
+   font-size: 1.5rem;
+   border: 2px solid #171750;
+   outline: none;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding-right:8px ;
+ }
+ .enviarMsg button{
+   width: 30%;
+   border-radius: 0px 20px  30px;
+   background-color: #171750;
+   color: white;
+   border: 0;
+   
+ }
+ .aviso{
+width: 55%;
+height: 20px;
+margin-top: 5px;
+   padding: 10px;
+   border-radius: 20px;
+   background-color: rgba(255, 166, 0, 0.39);
+   text-align: center;
+   color: rgb(0, 0, 0);
+ }
+ .aviso span{
+   color: rgb(8, 148, 20);
+ 
+ }
+ .circle{
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: green;
+ }
+ .fa-globe{
+   animation: on 0.9s linear infinite;
+ }
+ @keyframes on{
+   0%{
+     color: black;
+   }
+   100%{
+    color: green;
+   }
+ }
+ .online{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ .encerrar{
+   position: absolute;
+   width: 15%;
+   bottom: 13px;
+   padding: 7px;
+   background-color: rgb(148, 10, 10);
+   border-radius: 10px;
+   outline: none;
+   border: 1px solid black;
+   color: white;
+   font-size: 1rem;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   letter-spacing: 1px;
+ }
+ .leftRes{
+   display: flex;
+   position: absolute;
+ top: 70px;
+ left: 10px;
+ background-color: rgba(128, 128, 128, 0.795);
+ padding: 8px;
+ border-radius: 0 20px 10px 20px;
+ color: white;
+box-shadow: 1px 1px 0px  rgba(151, 149, 149, 0.774) inset;
+ }
+ 

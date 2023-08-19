@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>SALES ONLINE</title>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body id="parent">
+    <div class="login">
+      <i onclick="backLogin()" class="fa-solid fa-arrow-left"></i>
+      <h2>Login </h2>
+      <input id="user" type="text" placeholder="Usuario">
+      <i class="fa-solid fa-envelope"></i>
+      <input id="password" type="password" name="password" placeholder="Senha">
+      <i class="fa-solid fa-lock"></i>
+      <span id="erroPassword"></span>
+      <button onclick="lg()">Login in</button>
+    </div>
+    <div class="conteiner">
+      <header class="topo">
+        <h2>SALES ONLINE</h2>
+        <i onclick="abrirMenu()" class="fa-solid fa-bars"></i>
+
+      </header>
+
+      <!-- lista de produtos -->
+
+      <main class="conteiner2">
+        <h2>Lista de produtos</h2>
+        <div class="listaDeProdutos">
+        </div>
+      </main>
+      <!--codigó de barras-->
+      <main class="valores">
+        <h2>Produtos</h2>
+        <input type="text" id="codigo" placeholder="Codigo">
+        <br>
+        <button onclick="Buscar()" id="procurar">Buscar</button>
+        <!--Valor-->
+        <h1 id="valor">R$00,00</h1>
+        <h3 id="unidades">0 Unidades</h3>
+        <!-- botões -->
+
+        <div class="btns">
+
+
+          <button onclick="cancelar()" id="cancelar">Cancelar <br><i class="fa-solid fa-ban"></i></button>
+          <button onclick="pagar()" id="pagar">Pagamento <br><i class="fa-solid fa-money-check-dollar"></i></button>
+        </div>
+        <!-- lista dos produtos -->
+        <div class="codeList">
+          <button onclick="openTheList()"> Lista dos Produtos</button>
+        </div>
+        <button class="suporteBtn" onclick="suporte()"><i class="fa-solid fa-wrench"></i> suporte</button>
+        <p id="version">Versão 1.0</p>
+
+      </main>
+
+      <!-- imagem dos produtos -->
+      <div class="imgProduto">
+        <h2>imagem do produto</h2>
+        <img id="imgP" src="https://images.endeavor.org.br/images/posts/1658695_813131615366941_515418874_o.jpg" alt="" width="70%">
+      </div>
+      <div class="menu">
+        <ul>
+          <i onclick="fecharMenu()" class="fa-solid fa-xmark"></i>
+          <li onclick="entrarVendas()"><i class="fa-solid fa-bag-shopping"></i>Vendas</li>
+          <li><i class="fa-sharp fa-solid fa-sack-xmark"></i> Cancelamentos</li>
+          <li><i class="fa-sharp fa-solid fa-dollar-sign"></i> Valores</li>
+          <li onclick="openTheList()"><i class="fa-solid fa-list-ol"> </i>Lista dos produtos</li>
+
+          <li><i class="fa-solid fa-wrench"></i> Configurações</li>
+          <li onclick="logar()"><i class="fa-solid fa-user"></i> Login</li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="cancel">
+      <div class="btnsCancel">
+        <h2>TEM CERTEZA QUE QUER CANCELAR?</h2>
+        <button onclick="sim()" class="s">Sim</button>
+        <button onclick="não()" class="n">Não</button>
+      </div>
+    </div>
+    <div class="codeErrado">
+      <div class="codeE">
+        <h2>Produto não Encontrado!</h2>
+        <h3>Certifique que o codigo foi digitado corretamente!</h3>
+        <button onclick="ok()" class="ok">OK</button>
+      </div>
+    </div>
+    <div class="conteinerTwo">
+      <header class="topo">
+        <i onclick="back()" class="fa-solid fa-arrow-left"></i>
+        <h2>SALES ONLINE</h2>
+        <p></p>
+      </header>
+      <div class="formasPagamento">
+        <button class="de">Debito</button>
+        <button class="cr">Credito</button>
+        <button onclick="dinheiroBtn()" class="di">Dinheiro</button>
+        <button onclick="pixBtn()" class="pix">Pix</button>
+        <button class="vouc">Voucher</button>
+      </div>
+      <div class="pagamentoDinheiro">
+        <div class="receber">
+          <h2>Pagamento Em Dinheiro</h2>
+          <div class="receberValor">
+            Digite o Valor: <input id="receberValue" type="text" placeholder="R$ 00,00">
+            <button onclick="zerar()" id="zerar">Zerar</button>
+            <button onclick="enviarValor()" id="enviarValor">OK</button>
+          </div>
+          <img class="Reais" src="https://cdn-icons-png.flaticon.com/512/2543/2543363.png" alt="" width="60%">
+        </div>
+        <div class="valoresRecebidos">
+          <h1>Total</h1>
+          <h1 id="valorTwo">R$ 00,00</h1>
+          <h3 id="unidadesTwo">0 Unidades</h3>
+          <main class="somas">
+            <p>Valor Recebido: <span id="valorRecebido">R$ 00,00</span></p>
+            <p>Faltante:<span id="faltante">R$ 00,00</span></p>
+            <p>Troco: <span id="troco">R$ 00,00</span></p>
+          </main>
+          <div class="btns">
+            <button onclick="cancelar()" id="cancelar">Cancelar <br><i class="fa-solid fa-ban"></i></button>
+            <button class="finalizar">Finalizar<br><i class="fa-solid fa-money-check-dollar"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="pixCode">
+        <h2>Pagamento com Pix</h2>
+        <button onclick="GerarQr()" class="gerarQR"></button>
+        <main class="qrCode">
+          <img class="qr" src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSh-wrQu254qFaRcoYktJ5QmUhmuUedlbeMaQeaozAVD4lh4ICsGdBNubZ8UlMvWjKC" alt="" width="100%" height="100%">
+        </main>
+        <h2>Valor: <span id="valorQr">00,00</span></h2>
+      </div>
+    </div>
+
+
+    <div class="conteinerTree">
+      <header class="topo">
+        <i onclick="backVendas()" class="fa-solid fa-arrow-left"></i>
+        <h2>Vendas</h2>
+        <p></p>
+      </header>
+      <section class="produtosList">
+
+      </section>
+
+    </div>
+    <div class="listProduct">
+      <ul>
+        <button class="closeLIst" onclick="closeTheList()">X</button>
+        <h3>Lista de produtos</h3>
+        <ol>Tradicionais</ol>
+        <li>Napolitano: <b>7898006950220</b></li>
+        <li>Creme: <b>7898006950206</b></li>
+        <li>Morango: <b>7898006950237</b></li>
+        <ol>Festa no Pote</ol>
+        <li>Trio Tropical:</li>
+        <li>Trio Yogo</li>
+        <ol>Seleções</ol>
+        <li>Flocos:<b>448</b></li>
+        <li>Carioca: <b>446</b></li>
+        <li>Chocolate: <b>452</b></li>
+        <li>Passas Ao Rum: <b>449</b></li>
+        <li>Coco: <b>450</b></li>
+        <ol>Duetto</ol>
+        <li>Churros: <b>433</b></li>
+        <li>Chocolate com Trufa: <b>432</b></li>
+        <li>Leitinho Trufado: <b>438</b></li>
+        <li>Mousse de maracujá: <b>436</b></li>
+        <li>Frutas vermelhas: <b>437</b></li>
+        <ol>Delicia</ol>
+        <li>Torta de limão: <b>501</b></li>
+        <li>Pamonha: <b>502</b></li>
+        <ol>Casquinha</ol>
+        <li>Kid Cascão 10un: <b>4056</b> </li>
+      </ul>
+    </div>
+    <div class="suporte">
+      <div class="textOfSuporte">
+        <button class="closeLIst" onclick="closeTheList()">X</button>
+        <h2>Suporte Online</h2>
+        <p><i class="fa-solid fa-user"></i> Contato: 1198423878</p>
+        <p> <i class="fa-solid fa-at"></i> Email: salesonline.01@gmail.com</p>
+        <p><i class="fa-solid fa-comment-dots"></i> Chat Online</p>
+        <button onclick="openChat()" id="chatBtn">Iniciar Conversa</button>
+        <span>Desevolvedor: João Pedro Cardoso<br>11964872385</span>
+      </div>
+    </div>
+    <div id="chatConteiner">
+      <div class="chatOnline">
+        <header class="topoChat">
+          <h2>Suporte Tecnico Online</h2>
+        </header>
+        <div class="res-msg">
+
+          <span class="aviso"><i class="fa-solid fa-globe"></i> Chat Bot <span class="online">ONLINE</span></span>
+          <span class="leftRes">Bom dia<br>Como posso ajudar?</span>
+          <div class="enviarMsg">
+            <input type="text" name="" id="">
+            <button><i class="fa-solid fa-paper-plane"> Enviar</i></button>
+          </div>
+        </div>
+      </div>
+      <button onclick="encerrar()" class="encerrar">Encerrar</button>
+    </div>
+
+
+
+  </body>
+
+</html>

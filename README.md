@@ -12,4 +12,4 @@ Para usar ele você precisa saber os codigos dos produtos e eles se encontra no 
 ![b648c266-c6c8-4e28-b86b-35b7724e6052](https://github.com/Jp-Cardoso360/Sistema-de-vendas/assets/141683330/2e77e44a-4a8f-440d-9ccd-84ae92edc795)
 <h2>Link do sistema</h2>
 OBS: <strong>Não responsivo para mobile</strong><br>
-<a href = "https://sistema-de-vendas-jp-cadoso360.netlify.app/"target = "blank">Clique aqui</a>
+<a href = "https://sistema-de-vendas-jp-cadoso360.netlify.app/" target= "blank">Clique aqui</a>
